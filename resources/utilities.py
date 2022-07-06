@@ -449,7 +449,7 @@ def download_file(link, location, is_gui=None, verify_checksum=False):
                         print("")
                 if total_file_size > 1024:
                     total_downloaded_string = f" ({round(float(dl / total_file_size * 100), 2)}%)"
-                print(f"{round(count / 1024 / 1024, 2)}MB Downloaded{file_size_string}{total_downloaded_string}\nAverage Download Speed: {round(dl//(time.perf_counter() - start) / 100000 / 8, 2)} MB/s")
+                print(f"{round(count / 1024 / 1024, 2)}MB Downloaded{file_size_string}{total_downloaded_string}\nAverage Download Speed: {round(dl//(time.perf_counter() - start) / 100000 / 8, 2):{0:4}} MB/s")
 
         if verify_checksum is True:
             # Verify checksum
